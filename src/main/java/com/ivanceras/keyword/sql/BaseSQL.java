@@ -1,4 +1,4 @@
-package com.ivanceras.fluent;
+package com.ivanceras.keyword.sql;
 
 import java.util.LinkedList;
 import java.util.List;

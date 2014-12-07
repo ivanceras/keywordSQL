@@ -1,9 +1,9 @@
-package com.ivanceras.fluent;
+package com.ivanceras.keyword.sql;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ivanceras.fluent.Keywords;
+import com.ivanceras.keyword.sql.Keywords;
 
 public class SQL extends Keywords{
 	

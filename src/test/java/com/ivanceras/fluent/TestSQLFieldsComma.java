@@ -2,7 +2,7 @@ package com.ivanceras.fluent;
 
 import org.junit.Test;
 
-import static com.ivanceras.fluent.SQLStatics.*;
+import static com.ivanceras.keyword.sql.SQLStatics.*;
 
 public class TestSQLFieldsComma {
 	

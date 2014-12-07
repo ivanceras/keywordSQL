@@ -4,7 +4,10 @@ import static org.junit.Assert.assertArrayEquals;
 
 import org.junit.Test;
 
-import static com.ivanceras.fluent.SQLStatics.*;
+import com.ivanceras.keyword.sql.Breakdown;
+import com.ivanceras.keyword.sql.SQL;
+
+import static com.ivanceras.keyword.sql.SQLStatics.*;
 
 public class TestSQL1 {
 	

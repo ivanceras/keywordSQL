@@ -5,7 +5,8 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static com.ivanceras.fluent.SQLStatics.*;
+
+import static com.ivanceras.keyword.sql.SQLStatics.*;
 
 public class TestQuery2HiveSQL {
 

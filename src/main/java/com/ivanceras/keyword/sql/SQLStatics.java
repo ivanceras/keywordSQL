@@ -1,4 +1,6 @@
-package com.ivanceras.fluent;
+package com.ivanceras.keyword.sql;
+
+import com.ivanceras.keyword.sql.KeywordsStatics;
 
 public class SQLStatics extends KeywordsStatics{
 	

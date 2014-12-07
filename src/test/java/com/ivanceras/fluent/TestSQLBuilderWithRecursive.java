@@ -8,7 +8,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import static com.ivanceras.fluent.SQLStatics.*;
+import com.ivanceras.keyword.sql.Breakdown;
+import com.ivanceras.keyword.sql.SQL;
+
+import static com.ivanceras.keyword.sql.SQLStatics.*;
 
 
 public class TestSQLBuilderWithRecursive {

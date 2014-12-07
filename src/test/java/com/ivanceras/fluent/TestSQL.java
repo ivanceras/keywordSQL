@@ -1,10 +1,10 @@
 package com.ivanceras.fluent;
 
 
-import com.ivanceras.fluent.Breakdown;
-import com.ivanceras.fluent.SQL;
+import com.ivanceras.keyword.sql.Breakdown;
+import com.ivanceras.keyword.sql.SQL;
 
-import static com.ivanceras.fluent.SQLStatics.*;
+import static com.ivanceras.keyword.sql.SQLStatics.*;
 public class TestSQL {
 	
 	public static void main(String[] args) {
