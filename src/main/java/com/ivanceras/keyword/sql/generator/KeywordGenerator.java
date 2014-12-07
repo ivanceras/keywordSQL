@@ -12,6 +12,7 @@ import com.ivanceras.keyword.sql.SQL;
 /**
  * Generate functions based on the keywords listed on the files
  * @author lee
+ * TODO: also generate functions
  *
  */
 public class KeywordGenerator {
@@ -106,9 +107,12 @@ public class KeywordGenerator {
 		String keywords = FileUtil.readFile(file);
 		String[] splinters = keywords.split("\\s+");
 		System.out.println(splinters.length+" keywords from "+file);
-		totalKeywords  += splinters.length;
 		for(String splinter : splinters){
-			uniques.add(splinter);
+			String trimmed = splinter.trim();
+			if(!trimmed.isEmpty()){
+				uniques.add(trimmed);
+				totalKeywords++;
+			}
 		}
 	}
 }
