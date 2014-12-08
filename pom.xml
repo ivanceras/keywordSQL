@@ -51,6 +51,12 @@
 					<include>**/*.gwt.xml</include>
 				</includes>
 			</resource>
+			<resource>
+				<directory>gen/src</directory>
+				<includes>
+					<include>**/*.java</include>
+				</includes>
+			</resource>
 		</resources>
 		<plugins>
 			<plugin>

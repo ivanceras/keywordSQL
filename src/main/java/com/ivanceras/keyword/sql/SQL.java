@@ -96,11 +96,11 @@ public class SQL extends Keywords{
 	}
 
 	public SQL SELECT(SQL arg){
-		return SELECT().field(arg);
+		return ln().SELECT().field(arg);
 	}
 
 	public SQL SELECT(String... columns){
-		return SELECT().FIELD(columns);
+		return ln().SELECT().FIELD(columns);
 	}
 
 	public SQL SUM(SQL sql){
@@ -156,10 +156,10 @@ public class SQL extends Keywords{
 	}
 	
 	public SQL CONSTRAINT(String constraintName){
-		return CONSTRAINT().keyword(constraintName).ln();
+		return CONSTRAINT().keyword(constraintName);
 	}
 	public SQL CROSS_JOIN(String table){
-		return CROSS().JOIN().FIELD(table).ln();
+		return CROSS().JOIN().FIELD(table);
 	}
 	
 	public SQL DISTINCT(String... columns){
@@ -227,7 +227,7 @@ public class SQL extends Keywords{
 	}
 
 	public SQL FROM(String table){
-		FROM().keyword(table);
+		ln().FROM().keyword(table);
 		lastCall = TABLE;
 		return this;
 	}
@@ -251,7 +251,7 @@ public class SQL extends Keywords{
 		return this;
 	}
 	public SQL FULL_OUTER_JOIN(String table){
-		return FULL().OUTER().JOIN().FIELD(table).ln();
+		return FULL().OUTER().JOIN().FIELD(table);
 	}
 
 
@@ -311,7 +311,7 @@ public class SQL extends Keywords{
 	}
 	
 	public SQL IF_EXISTS(){
-		return IF().EXISTS().ln();
+		return IF().EXISTS();
 	}
 	public SQL IF_NOT_EXISTS(){
 		return IF().NOT().EXISTS();
@@ -365,11 +365,11 @@ public class SQL extends Keywords{
 	}
 
 	public SQL LEFT_JOIN(String table){
-		return ln().LEFT().JOIN().FIELD(table).ln();
+		return ln().LEFT().JOIN().FIELD(table);
 	}
 
 	public SQL LEFT_OUTER_JOIN(String table){
-		return ln().LEFT().OUTER().JOIN().FIELD(table).ln();
+		return ln().LEFT().OUTER().JOIN().FIELD(table);
 	}
 
 	public SQL LESS_THAN(Object value){
@@ -387,11 +387,11 @@ public class SQL extends Keywords{
 	}
 
 	public SQL MATCH_FULL(){
-		return MATCH().FULL().ln();
+		return MATCH().FULL();
 	}
 
 	public SQL MATCH_SIMPLE(){
-		return MATCH().SIMPLE().ln();
+		return MATCH().SIMPLE();
 	}
 
 
@@ -439,7 +439,7 @@ public class SQL extends Keywords{
 	}
 
 	public SQL ON(String column1, String column2){
-		return ON().FIELD(column1).EQUAL().FIELD(column2).ln();
+		return ON().FIELD(column1).EQUAL().FIELD(column2);
 	}
 	public SQL ON_DELETE(){
 		return ON().DELETE();
@@ -469,7 +469,7 @@ public class SQL extends Keywords{
 		return PRIMARY().KEY();
 	}
 	public SQL PRIMARY_KEY(String...columns){
-		return PRIMARY_KEY().openParen().FIELD(columns).closeParen().ln();
+		return PRIMARY_KEY().openParen().FIELD(columns).closeParen();
 	}
 	public SQL REFERENCES(String table, String column){
 		return REFERENCES().ln()
@@ -482,15 +482,15 @@ public class SQL extends Keywords{
 	}
 
 	public SQL RETURNING(String column){
-		return RETURNING().FIELD(column);
+		return ln().RETURNING().FIELD(column);
 	}
 
 	public SQL RIGHT_JOIN(String table){
-		return RIGHT().JOIN().FIELD(table).ln();
+		return ln().RIGHT().JOIN().FIELD(table);
 	}
 
 	public SQL RIGHT_OUTER_JOIN(String table){
-		return RIGHT().OUTER().JOIN().FIELD(table).ln();
+		return ln().RIGHT().OUTER().JOIN().FIELD(table);
 	}
 
 	public SQL SCHEMA(String schema){

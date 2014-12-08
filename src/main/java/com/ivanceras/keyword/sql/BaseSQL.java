@@ -68,7 +68,7 @@ public abstract class BaseSQL {
 	}
 	
 	public SQL ln(){
-		return keyword("\n");
+		return chars("\n");
 	}
 	
 	public Breakdown build(Breakdown bk, SQL passed){
