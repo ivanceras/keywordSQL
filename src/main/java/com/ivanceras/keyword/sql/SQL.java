@@ -135,18 +135,18 @@ public class SQL extends Keywords{
 
 
 	public SQL AND(String column){
-		return AND().FIELD(column);
+		return ln().AND().FIELD(column);
 	}
 
 	public SQL AND_ON(String column1, String column2) {
-		return AND().FIELD(column1).EQUAL_TO_FIELD(column2);
+		return ln().AND().FIELD(column1).EQUAL_TO_FIELD(column2);
 	}
 
 	public SQL AS(SQL sql){
-		return AS().FIELD(sql);
+		return AS().ln().FIELD(sql);
 	}
-	public SQL AS(String columnAs){
-		return AS().FIELD(columnAs);
+	public SQL AS(String asColumn){
+		return AS().FIELD(asColumn);
 	}
 	
 	public Breakdown build(){
@@ -223,7 +223,7 @@ public class SQL extends Keywords{
 	}
 	
 	public SQL FROM(SQL sql){
-		return FROM().FIELD(sql);
+		return ln().FROM().FIELD(sql);
 	}
 
 	public SQL FROM(String table){
@@ -244,14 +244,14 @@ public class SQL extends Keywords{
 
 
 	public SQL FROM(String[] tables){
-		FROM();
+		ln().FROM();
 		for(String tbl : tables){
 			table(tbl);
 		}
 		return this;
 	}
 	public SQL FULL_OUTER_JOIN(String table){
-		return FULL().OUTER().JOIN().FIELD(table);
+		return ln().FULL().OUTER().JOIN().FIELD(table);
 	}
 
 
