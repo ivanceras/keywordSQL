@@ -7,7 +7,7 @@ import com.ivanceras.keyword.sql.Keywords;
 
 public class SQL extends Keywords{
 	
-
+	
 	/**
 	 * Wraps with open and close parenthesis the SQL
 	 * @param sql
@@ -176,6 +176,9 @@ public class SQL extends Keywords{
 	public SQL EQUAL() {
 		return keyword("=");
 	}
+	public SQL NOT_EQUAL() {
+		return keyword("!=");
+	}
 	public SQL EQUAL(Object value){
 		return EQUAL().VALUE(value);
 	}
@@ -283,19 +286,26 @@ public class SQL extends Keywords{
 		return function(function, column);
 	}
 
+	public SQL GREATER_THAN(){
+		return keyword(">");
+	}
+	
 	public SQL GREATER_THAN(Object value){
-		return keyword(">").VALUE(value);
+		return GREATER_THAN().VALUE(value);
 	}
 
 	public SQL GREATER_THAN(SQL sql){
-		return keyword(">").FIELD(sql);
+		return GREATER_THAN().FIELD(sql);
 	}
 
+	public SQL GREATER_THAN_OR_EQUAL(){
+		return keyword(">=");
+	}
 	public SQL GREATER_THAN_OR_EQUAL(Object value){
-		return keyword(">=").VALUE(value);
+		return GREATER_THAN_OR_EQUAL().VALUE(value);
 	}
 	public SQL GROUP_BY(SQL sql){
-		return keyword("GROUP BY").FN(sql);
+		return GROUP().BY().FN(sql);
 	}
 
 	public SQL GROUP_BY(String... column){
@@ -371,16 +381,24 @@ public class SQL extends Keywords{
 	public SQL LEFT_OUTER_JOIN(String table){
 		return ln().LEFT().OUTER().JOIN().FIELD(table);
 	}
+	
+	public SQL LESS_THAN(){
+		return keyword("<");
+	}
 
 	public SQL LESS_THAN(Object value){
-		return keyword("<").VALUE(value);
+		return LESS_THAN().VALUE(value);
 	}
 
 	public SQL LESS_THAN(SQL sql){
-		return keyword("<").FIELD(sql);
+		return LESS_THAN().FIELD(sql);
+	}
+	
+	public SQL LESS_THAN_OR_EQUAL(){
+		return keyword("<=");
 	}
 	public SQL LESS_THAN_OR_EQUAL(Object value){
-		return keyword("<=").VALUE(value);
+		return LESS_THAN_OR_EQUAL().VALUE(value);
 	}
 	public SQL LIMIT(int limit){
 		return LIMIT().keyword(limit+"");
@@ -628,6 +646,21 @@ public class SQL extends Keywords{
 	public SQL RADIANS(SQL sql) {
 		return FUNCTION("RADIANS",sql);
 	}
+	
+	public SQL MULTIPLY(){
+		return keyword("*");
+	}
+	public SQL PLUS(){
+		return keyword("+");
+	}
+	
+	public SQL MINUS(){
+		return keyword("-");
+	}
+	public SQL DIVIDE(){
+		return keyword("/");
+	}
+	
 	
 	
 }
