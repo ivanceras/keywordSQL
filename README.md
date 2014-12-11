@@ -1,9 +1,7 @@
 keywordSQL
 ==========
 I list down all the keywords of Major Database vendors and convert then into methods in a class.
-Now you can call these methods as though you are writing a series of strings in a Stringbuilder.
-
-This is like and extension of StringBuilder which you use to form string, sql strings specifically when you are writing SQL queries for your applications.
+Now you can call these methods as though you are writing a series of texts in a Stringbuilder.
 
 
 #How much complexity of SQL statements I can write?
@@ -85,6 +83,12 @@ parameters: [10.0, 10.0, 123.0, 6371.0, 5.0]
 
 ```
 
+
+#Advantages
+* No SQL typo anymore, since IDE checks it for you.
+* SQL injection resistance while writing the values as it where supposed to be.
+
+
 #Supported SQL keywords
 
 * postgresql
@@ -93,4 +97,8 @@ parameters: [10.0, 10.0, 123.0, 6371.0, 5.0]
 * mysql
 * mariadb
 
+# Roadmap
+
+* thorough support for functions
+* Make a lightweight version of Table/Column generators from ivanceras ORM, this way all text will be check by the IDE
 
