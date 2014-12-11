@@ -1,5 +1,8 @@
 keywordSQL
 ==========
+
+[![Build Status](https://api.travis-ci.org/ivanceras/keywordSQL.svg)](https://travis-ci.org/ivanceras/keywordSQL)
+
 I list down all the keywords of Major Database vendors and convert then into methods in a class.
 Now you can call these methods as though you are writing a series of texts in a Stringbuilder.
 
