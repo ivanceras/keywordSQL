@@ -592,6 +592,7 @@ public class SQL extends Keywords{
 	public SQL WITH(String queryName, SQL sql){
 		return WITH(queryName).AS().FIELD(sql);
 	}
+
 	public SQL WITH_RECURSIVE(String queryName){
 		return WITH().RECURSIVE().keyword(queryName);
 	}
