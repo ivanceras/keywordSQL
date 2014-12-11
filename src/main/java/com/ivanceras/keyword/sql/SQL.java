@@ -648,17 +648,22 @@ public class SQL extends Keywords{
 	}
 	
 	public SQL MULTIPLY(){
-		return keyword("*");
+		return ln().keyword("*");
 	}
 	public SQL PLUS(){
-		return keyword("+");
+		return ln().keyword("+");
 	}
 	
 	public SQL MINUS(){
-		return keyword("-");
+		return ln().keyword("-");
 	}
 	public SQL DIVIDE(){
-		return keyword("/");
+		return ln().keyword("/");
+	}
+	
+	@Override
+	public SQL OVER(){
+		return FUNCTION("OVER", "");
 	}
 	
 	
