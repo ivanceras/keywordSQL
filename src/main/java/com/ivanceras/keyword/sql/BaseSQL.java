@@ -3,20 +3,25 @@ package com.ivanceras.keyword.sql;
 import java.util.LinkedList;
 import java.util.List;
 
+import static com.ivanceras.keyword.sql.BaseSQL.Type.*;
+
 public abstract class BaseSQL {
 
 	protected List<Object> keywords = new LinkedList<Object>();
 
-	String lastCall = null;
+	Type lastCall = null;
 
-	protected final String FIELD = "FIELD";
-	protected final String FUNCTION = "FUNCTION";
-	protected final String KEYWORD = "KEYWORD";
-	protected final String VALUE = "VALUE";
-	
 	boolean smartMode = true;//if on smart mode, adds commas, and parenthesis automatically if possible.
 
-	protected final String TABLE = "TABLE";
+	public enum Type{
+		FIELD,
+		FUNCTION,
+		KEYWORD,
+		VALUE,
+		TABLE,
+		OPEN_PAREN,
+		CLOSE_PAREN,
+	}
 
 	int tabs = 0;
 
@@ -97,11 +102,11 @@ public abstract class BaseSQL {
 	}
 
 	public SQL openParen(){
-		lastCall = "_OPEN_PAREN_";
+		lastCall =OPEN_PAREN;
 		return chars("(");
 	}
 	public SQL closeParen(){
-		lastCall = "_CLOSE_PAREN_";
+		lastCall = CLOSE_PAREN;
 		return chars(")");
 	}
 	
