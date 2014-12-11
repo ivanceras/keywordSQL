@@ -15,6 +15,17 @@ public class SQLStatics extends KeywordsStatics{
 	public static SQL WITH(String queryName, SQL sql){
 		return instance().WITH(queryName, sql);
 	}
+	
+	public static SQL WITH(String queryName, SQL sql, String queryName2, SQL sql2){
+		return instance().WITH(queryName).AS().FIELD(sql)
+				.ln().comma().keyword(queryName2).AS(sql2);
+	}
+	
+	public static SQL WITH(String queryName, SQL sql, String queryName2, SQL sql2, String queryName3, SQL sql3){
+		return instance().WITH(queryName).AS().FIELD(sql)
+				.ln().comma().keyword(queryName2).AS(sql2)
+				.ln().comma().keyword(queryName3).AS(sql3);
+	}
 	public static SQL WITH_RECURSIVE(String queryName){
 		return instance().WITH_RECURSIVE(queryName);
 	}

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ivanceras.keyword.sql.Keywords;
+import static com.ivanceras.keyword.sql.BaseSQL.Type.*;
 
 public class SQL extends Keywords{
 	
@@ -170,7 +171,6 @@ public class SQL extends Keywords{
 		openParen();
 		FIELD(columns);
 		closeParen();
-		lastCall = "DISTINCT_ON";
 		return this;
 	}
 	public SQL EQUAL() {
@@ -592,6 +592,7 @@ public class SQL extends Keywords{
 	public SQL WITH(String queryName, SQL sql){
 		return WITH(queryName).AS().FIELD(sql);
 	}
+
 	public SQL WITH_RECURSIVE(String queryName){
 		return WITH().RECURSIVE().keyword(queryName);
 	}
@@ -648,17 +649,22 @@ public class SQL extends Keywords{
 	}
 	
 	public SQL MULTIPLY(){
-		return keyword("*");
+		return ln().keyword("*");
 	}
 	public SQL PLUS(){
-		return keyword("+");
+		return ln().keyword("+");
 	}
 	
 	public SQL MINUS(){
-		return keyword("-");
+		return ln().keyword("-");
 	}
 	public SQL DIVIDE(){
-		return keyword("/");
+		return ln().keyword("/");
+	}
+	
+	@Override
+	public SQL OVER(){
+		return FUNCTION("OVER", "");
 	}
 	
 	
