@@ -1,7 +1,7 @@
 package com.ivanceras.keyword.sql.generator;
 
 /**
- * This will generate functions for you
+ * TODO: This will generate functions for you
  * @author lee
  *
  */

@@ -150,7 +150,7 @@ public class TestSQLBuilderRecursive {
 								.AND_ON("Persons.lastName" , "Customer.lastName")
 							.GROUP_BY("CustomerID")
 			)
-			.append(SELECT()
+			.SELECT()
 				.FIELD("Customers.*")
 				.FIELD("Orders.OrderTime").AS("LatestOrderTime")
 				.FIELD(SELECT(COUNT("*"))
@@ -166,7 +166,7 @@ public class TestSQLBuilderRecursive {
 					.USING("ID")
 				.WHERE("Orders.ID").IN(SELECT("ID").FROM("LatestOrders"))
 				.AND("Orders.n_items").GREATER_THAN(0)
-				);
+				;
 		
 		Breakdown actual = sql.build();
 		
