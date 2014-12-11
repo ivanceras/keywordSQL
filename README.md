@@ -12,7 +12,7 @@ Now you can call these methods as though you are writing a series of texts in a 
 
 Example: List down products that is sold by somebody that is within 5 k.m from me.
 
-```sql
+```java
 
 	@Test
 	public void test1(){
@@ -55,7 +55,7 @@ Example: List down products that is sold by somebody that is within 5 k.m from m
 ```
 The output
 
-```java
+```sql
 
 SQL:
 WITH distanceSQL AS ( 
