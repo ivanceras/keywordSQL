@@ -4,11 +4,11 @@ keywordSQL
 [![Build Status](https://api.travis-ci.org/ivanceras/keywordSQL.svg)](https://travis-ci.org/ivanceras/keywordSQL)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.ivanceras/keywordSQL/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.ivanceras/keywordSQL)
 
-I list down all the keywords of Major Database vendors and convert then into methods in a class.
+I list down all the keywords of Major Database vendors and [convert](https://github.com/ivanceras/keywordSQL/blob/master/src/main/java/com/ivanceras/keyword/sql/generator/KeywordGenerator.java) them into methods in a class.
 Now you can call these methods as though you are writing a series of texts in a Stringbuilder.
 
 
-#How much complexity of SQL statements I can write?
+##How much complexity of SQL statements I can write?
 * As complex as you want it to get.
 
 Example: List down products that is sold by somebody that is within 5 k.m from me.
@@ -93,12 +93,13 @@ parameters: [10.0, 10.0, 123.0, 6371.0, 5.0]
 ```
 
 
-#Advantages
+##Advantages
 * No SQL typo anymore, since IDE checks it for you.
 * SQL injection resistance while writing the values as it where supposed to be.
 
 
-#Supported SQL keywords
+
+##Supported SQL keywords
 
 * postgresql
 * sqlite
@@ -106,7 +107,7 @@ parameters: [10.0, 10.0, 123.0, 6371.0, 5.0]
 * mysql
 * mariadb
 
-# Roadmap
+##Roadmap
 
 * thorough support for functions
 * Make a lightweight version of Table/Column generators from ivanceras ORM, this way all text will be check by the IDE
