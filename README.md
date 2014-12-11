@@ -14,6 +14,11 @@ Example: List down products that is sold by somebody that is within 5 k.m from m
 
 ```java
 
+
+//import static com.ivanceras.keyword.sql.KeywordsStatics.*;
+//import static com.ivanceras.keyword.sql.SQLStatics.*;
+
+
 	@Test
 	public void test1(){
 		double myLatitude = 10.0000d;
@@ -24,12 +29,12 @@ Example: List down products that is sold by somebody that is within 5 k.m from m
 		SQL sql = WITH("distanceSQL", SELECT()
 				.ACOS(
 						SIN(RADIANS(VALUE( myLatitude )))
-						.MULTIPLY().SIN(RADIANS(FIELD( "latitude" )))
-						.PLUS().COS(RADIANS(VALUE( myLatitude )))
-						.MULTIPLY().COS(RADIANS(FIELD( "latitude" ))).MULTIPLY()
-						.COS(RADIANS(FIELD( "longitude" ))
-								.MINUS().RADIANS(VALUE( myLongitude )))
-						).MULTIPLY().VALUE(earthRadius)
+						.MULTIPLY() .SIN(RADIANS(FIELD( "latitude" )))
+						.PLUS() .COS(RADIANS(VALUE( myLatitude )))
+						.MULTIPLY() .COS(RADIANS(FIELD( "latitude" )))
+						.MULTIPLY() .COS(RADIANS(FIELD( "longitude" ))
+								.MINUS() .RADIANS(VALUE( myLongitude )))
+						).MULTIPLY() .VALUE(earthRadius)
 						.AS("computed_distance")
 						.FIELD("address.address_id")
 						.FROM("address")
